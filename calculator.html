@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <main>
+        <div class="mainContainer">
+            <div class="calculator">
+                <div class="screenArea">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="line"></div>
+                <!-- numbPad -->
+                <div class="numbPad">
+                    <div class="rows rowFirst">
+                        <button class="numbButton" onclick="clearDisplay()">C</button>
+                        <button class="numbButton" onclick="backspace()">⌫</button>
+                        <button class="numbButton" onclick="percentage()">%</button>
+                        <button class="numbButton" onclick="appendOperator('/')">÷</button>
+                    </div>
+                    <div class="rows rowSecond">
+                        <button class="numbButton" onclick="appendToDisplay('7')">7</button>
+                        <button class="numbButton" onclick="appendToDisplay('8')">8</button>
+                        <button class="numbButton" onclick="appendToDisplay('9')">9</button>
+                        <button class="numbButton" onclick="appendOperator('*')">x</button>
+                    </div>
+                    <div class="rows rowThrird">
+                        <button class="numbButton" onclick="appendToDisplay('4')">4</button>
+                        <button class="numbButton" onclick="appendToDisplay('5')">5</button>
+                        <button class="numbButton" onclick="appendToDisplay('6')">6</button>
+                        <button class="numbButton" onclick="appendOperator('-')">-</button>
+                    </div>
+                    <div class="rows rowForth">
+                        <button class="numbButton" onclick="appendToDisplay('1')">1</button>
+                        <button class="numbButton" onclick="appendToDisplay('2')">2</button>
+                        <button class="numbButton" onclick="appendToDisplay('3')">3</button>
+                        <button class="numbButton" onclick="appendOperator('+')">+</button>
+                    </div>
+                    <div class="rows rowFifth">
+                        <button class="numbButton" onclick="appendToDisplay('00')">00</button>
+                        <button class="numbButton" onclick="appendToDisplay('0')">0</button>
+                        <button class="numbButton" onclick="appendToDisplay('.')">.</button>
+                        <button class="numbButton" onclick="calculateResult()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
