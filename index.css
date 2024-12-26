@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #ff8700;
+    background-color: #000;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+}
+
+.subMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calcContainer {
+    width: 540px;
+    height: auto;
+    border: 2px solid #ff8700;
+    border-radius: 25px;
+}
+
+.viewArea {
+    width: 100%;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.forStorageDisp {
+    width: 98%;
+    height: 195px;
+    margin: 5px;
+    align-self: self-end;
+}
+
+#storageDisplay {
+    width: 100%;
+    height: 100%;
+    color: #ff8700;
+    color: #ff8700;
+    font-size: 20px;
+    padding: 0 0 0 10px;
+}
+
+.forCalcDispAndOperatorDisp {
+    width: 98%;
+    height: 55px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calcDisplay {
+    width: calc(100% - 55px);
+    height: 100%;
+    color: #ff8700;
+    font-size: 25px;
+    padding: 0 0 0 10px;
+}
+
+#operatorCharDisplay {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    text-align: center;
+    color: #ff8700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rowCollection {
+    width: 100%;
+    /* height: 70%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.numbRow {
+    /* width: ; */
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.numbRow>* {
+    margin: 0 5px 5px;
+    border-radius: 15px;
+    width: 125px;
+    height: 75px;
+    border: #ff8700 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allCrlearBtn>:first-child {
+    position: relative;
+    left: 15px;
+}
+
+.allCrlearBtn>:last-child {
+    position: relative;
+    right: 15px;
+}
+
+.cutBtnImg {
+    width: 56px;
+    height: 30px;
+    display: flex;
+}
+
+.onlyForPower {
+    width: 30px;
+}
+
+.onlyForOneByX {
+    width: 50px;
+}
+
+.onlyForFactorial {
+    width: 25px;
+}
