@@ -15,9 +15,7 @@
                 <!-- === View Area === -->
                 <div class="viewArea">
                     <!-- storage input -->
-                    <div class="forStorageDisp">
-                        <input type="text" name="storageDisplay" id="storageDisplay"
-                            style="background-color: #000000; border-style: none;" disabled />
+                    <div class="forStorageDisp" id="forStorageDisp">
                     </div>
                     <!-- calc input -->
                     <div class="forCalcDispAndOperatorDisp">
@@ -32,44 +30,50 @@
                 <div class="rowCollection">
                     <!-- === First Row === -->
                     <div class="numbRow firstRow">
-                        <div class="btnOne allCrlearBtn"><img src="svgs/aOfClear.svg"><img src="svgs/Allclear.svg">
+                        <div class="commonBtn btnOne allCrlearBtn allCharacterBtn" data-character="allClear"><img
+                                src="svgs/aOfClear.svg"><img src="svgs/Allclear.svg">
                         </div>
-                        <div class="btnTwo clearBtn allCharacterBtn" data-character="clear"><img src="svgs/clear.svg">
+                        <div class="commonBtn btnTwo clearBtn allCharacterBtn" data-character="clear"><img
+                                src="svgs/clear.svg">
                         </div>
-                        <div class="btnThree specialOperation" id="forPercentage"><img class="onlyForPercentage"
-                                src="svgs/percentage.svg">
+                        <div class="commonBtn btnThree specialOperation" id="forPercentage"><img
+                                class="onlyForPercentage" src="svgs/percentage.svg">
                         </div>
-                        <div class="btnFour cutBtn allCharacterBtn" data-character="cut"><img class="cutBtnImg"
-                                src="svgs/cut.svg">
+                        <div class="commonBtn btnFour cutBtn allCharacterBtn" data-character="cut"><img
+                                class="cutBtnImg" src="svgs/cut.svg">
                         </div>
                     </div>
                     <!-- ==/. First Row === -->
 
                     <!-- === Second Row === -->
                     <div class="numbRow secondRow">
-                        <div class="btnOne specialOperation allCharacterBtn" data-character="^(-1)"><img
+                        <div class="commonBtn btnOne specialOperation allCharacterBtn" data-character="^(-1)"><img
                                 class="onlyForOneByX" src="svgs/oneByX.svg">
                         </div>
-                        <div class="btnTwo specialOperation allCharacterBtn" id="forPower" data-character="^"><img
-                                class="onlyForPower" src="svgs/power.svg">
+                        <div class="commonBtn btnTwo specialOperation allCharacterBtn" id="forPower" data-character="^">
+                            <img class="onlyForPower" src="svgs/power.svg">
                         </div>
-                        <div class="btnThree specialOperation allCharacterBtn" id="forRoot" data-character="^(1/2)"><img
-                                class="onlyForRoot" src="svgs/sqRoot.svg">
+                        <div class="commonBtn btnThree specialOperation allCharacterBtn" id="forRoot"
+                            data-character="^(1/2)"><img class="onlyForRoot" src="svgs/sqRoot.svg">
                         </div>
-                        <div class="btnFour operatorBtn allCharacterBtn" data-character="/"><img src="svgs/divide.svg">
+                        <div class="commonBtn btnFour operatorBtn allCharacterBtn" data-character="/"><img
+                                src="svgs/divide.svg">
                         </div>
                     </div>
                     <!-- ==/. Second Row === -->
 
                     <!-- === Third Row === -->
                     <div class="numbRow thirdRow">
-                        <div class="btnOne numericBtn allCharacterBtn" data-character="7"><img src="svgs/seven.svg">
+                        <div class="commonBtn btnOne numericBtn allCharacterBtn" data-character="7"><img
+                                src="svgs/seven.svg">
                         </div>
-                        <div class="btnTwo numericBtn allCharacterBtn" data-character="8"><img src="svgs/eight.svg">
+                        <div class="commonBtn btnTwo numericBtn allCharacterBtn" data-character="8"><img
+                                src="svgs/eight.svg">
                         </div>
-                        <div class="btnThree numericBtn allCharacterBtn" data-character="9"><img src="svgs/nine.svg">
+                        <div class="commonBtn btnThree numericBtn allCharacterBtn" data-character="9"><img
+                                src="svgs/nine.svg">
                         </div>
-                        <div class="btnFour operatorBtn allCharacterBtn" data-character="*"><img
+                        <div class="commonBtn btnFour operatorBtn allCharacterBtn" data-character="*"><img
                                 src="svgs/multiply.svg">
                         </div>
                     </div>
@@ -77,38 +81,48 @@
 
                     <!-- === Fourth Row === -->
                     <div class="numbRow fourthRow">
-                        <div class="btnOne numericBtn allCharacterBtn" data-character="4"><img src="svgs/four.svg">
+                        <div class="commonBtn btnOne numericBtn allCharacterBtn" data-character="4"><img
+                                src="svgs/four.svg">
                         </div>
-                        <div class="btnTwo numericBtn allCharacterBtn" data-character="5"><img src="svgs/five.svg">
+                        <div class="commonBtn btnTwo numericBtn allCharacterBtn" data-character="5"><img
+                                src="svgs/five.svg">
                         </div>
-                        <div class="btnThree numericBtn allCharacterBtn" data-character="6"><img src="svgs/six.svg">
+                        <div class="commonBtn btnThree numericBtn allCharacterBtn" data-character="6"><img
+                                src="svgs/six.svg">
                         </div>
-                        <div class="btnFour operatorBtn allCharacterBtn" data-character="-"><img src="svgs/minus.svg">
+                        <div class="commonBtn btnFour operatorBtn allCharacterBtn" data-character="-"><img
+                                src="svgs/minus.svg">
                         </div>
                     </div>
                     <!-- ==/. Fourth Row === -->
 
                     <!-- === Fifth Row === -->
                     <div class="numbRow fifthRow">
-                        <div class="btnOne numericBtn allCharacterBtn" data-character="1"><img src="svgs/one.svg"></div>
-                        <div class="btnTwo numericBtn allCharacterBtn" data-character="2"><img src="svgs/two.svg"></div>
-                        <div class="btnThree numericBtn allCharacterBtn" data-character="3"><img src="svgs/three.svg">
+                        <div class="commonBtn btnOne numericBtn allCharacterBtn" data-character="1"><img
+                                src="svgs/one.svg"></div>
+                        <div class="commonBtn btnTwo numericBtn allCharacterBtn" data-character="2"><img
+                                src="svgs/two.svg"></div>
+                        <div class="commonBtn btnThree numericBtn allCharacterBtn" data-character="3"><img
+                                src="svgs/three.svg">
                         </div>
-                        <div class="btnFour operatorBtn allCharacterBtn" data-character="+"><img src="svgs/plus.svg">
+                        <div class="commonBtn btnFour operatorBtn allCharacterBtn" data-character="+"><img
+                                src="svgs/plus.svg">
                         </div>
                     </div>
                     <!-- ==/. Fifth Row === -->
 
                     <!-- === Sixth Row === -->
                     <div class="numbRow sixthRow">
-                        <div class="btnOne specialOperation" id="forFactorial"><img class="onlyForFactorial"
+                        <div class="commonBtn btnOne specialOperation" id="forFactorial"><img class="onlyForFactorial"
                                 src="svgs/factorial.svg">
                         </div>
-                        <div class="btnTwo numericBtn allCharacterBtn" data-character="0"><img src="svgs/zero.svg">
+                        <div class="commonBtn btnTwo numericBtn allCharacterBtn" data-character="0"><img
+                                src="svgs/zero.svg">
                         </div>
-                        <div class="btnThree numericBtn allCharacterBtn" data-character="."><img src="svgs/dot.svg">
+                        <div class="commonBtn btnThree numericBtn allCharacterBtn" data-character="."><img
+                                src="svgs/dot.svg">
                         </div>
-                        <div class="btnFour specialOperation" id="forEvaluating"><img class="onlyForEqual"
+                        <div class="commonBtn btnFour specialOperation" id="forEvaluating"><img class="onlyForEqual"
                                 src="svgs/equal.svg">
                         </div>
                     </div>
