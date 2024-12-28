@@ -4,6 +4,7 @@ let allCharacterBtn = document.querySelectorAll(".allCharacterBtn");
 // === Inputs
 let operatorCharDisplay = document.querySelector("#operatorCharDisplay");
 let calcDisplay = document.querySelector("#calcDisplay");
+let forStorageDisp = document.querySelector("#forStorageDisp");
 
 
 
@@ -11,6 +12,8 @@ allCharacterBtn.forEach(character => {
     character.addEventListener("click", () => {
         // === character from data-character
         let charData = character.getAttribute("data-character");
+        // === img element to remove
+        let imgToRemove = document.querySelectorAll("#storageDisplay");
         console.log(charData);
         // === character from input value
         let currentValue = calcDisplay.value;
@@ -28,8 +31,19 @@ allCharacterBtn.forEach(character => {
             }
         } else if (charData === "clear") {
             calcDisplay.value = "";
+            while (operatorCharDisplay.firstChild) {
+                operatorCharDisplay.removeChild(operatorCharDisplay.firstChild);
+            }
         } else if (charData === "cut") {
             calcDisplay.value = calcDisplay.value.slice(0, -1);
+        } else if (charData === "allClear") {
+            calcDisplay.value = "";
+            while (operatorCharDisplay.firstChild) {
+                operatorCharDisplay.removeChild(operatorCharDisplay.firstChild);
+            }
+            imgToRemove.forEach(imgTag => {
+                imgTag.remove();
+            });
         }
     })
 });
@@ -81,6 +95,20 @@ factorialBtn.addEventListener("click", () => {
 })
 
 
+
+// === for storage area;
+function calculationStorage(storageValue) {
+    let forStorageDisp = document.querySelector(".forStorageDisp")
+    let storageInput = document.createElement("input");
+    storageInput.disabled = true;
+    storageInput.setAttribute("id", "storageDisplay");
+    storageInput.value = storageValue;
+    forStorageDisp.prepend(storageInput);
+    forStorageDisp.scrollTop = forStorageDisp.scrollHeight;
+};
+
+
+
 // === evaluating the values of input .
 let equalBtn = document.querySelector("#forEvaluating");
 equalBtn.addEventListener("click", () => {
@@ -91,11 +119,10 @@ equalBtn.addEventListener("click", () => {
     try {
         const result = new Function(`return ${inputValue}`)();
         calcDisplay.value = result;
+        calculationStorage(inputValue);
         console.log(result);
     } catch (error) {
         calcDisplay.value = "Error";
         console.error("Invalid Expression:", error);
     }
-})
-
-
+});
