@@ -122,7 +122,7 @@ equalBtn.addEventListener("click", () => {
         calculationStorage(inputValue);
         console.log(result);
     } catch (error) {
-        calcDisplay.value = "Error";
+        calcDisplay.value = "Something went wrong!!!";
         console.error("Invalid Expression:", error);
     }
 });
